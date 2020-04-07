@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: pranikakubernetesproject 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pranikakubernetesproject 
+    spec:
+      containers:
+        - name: pranikakubernetesproject 
+          image: kubernetestestcontainer.azurecr.io/pranikakubernetesproject
+          ports:
+          - containerPort: 8090
