@@ -23,7 +23,7 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        containerRegistry: 'docker-test-project'
+        containerRegistry: 'azure-docker-ey'
         repository: 'bl533hh/docker-test-project'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
