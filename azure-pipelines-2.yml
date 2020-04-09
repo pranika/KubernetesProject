@@ -11,7 +11,7 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'ey-kubernetes-service-connection'
+  dockerRegistryServiceConnection: 'ac85df60-c21b-4444-aa0f-740943e069ed'
   imageRepository: 'pranikakubernetesproject'
   containerRegistry: 'kubernetestestcontainer.azurecr.io'
   dockerfilePath: '**/Dockerfile'
