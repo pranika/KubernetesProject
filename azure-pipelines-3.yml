@@ -13,7 +13,7 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '69c70351-e854-4928-9a63-b25a9e029317'
   imageRepository: 'pranikakubernetesproject'
-  containerRegistry: 'ey-kubernetes-service-connection'
+  containerRegistry: 'kubernetestestcontainer.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'kubernetestestcontainer19300784-auth'
@@ -69,6 +69,7 @@ stages:
             displayName: Deploy to Kubernetes cluster
             inputs:
               action: deploy
+              kubernetesServiceConnection: 'ey-kubernetes-service-connection'
               manifests: |
                 $(Pipeline.Workspace)/manifests/deployment.yml
                 $(Pipeline.Workspace)/manifests/service.yml
